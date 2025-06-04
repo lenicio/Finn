@@ -45,3 +45,11 @@ class Transacao(BaseModel):
         verbose_name='Data da transação',
         help_text='xx/xx/xxxx'
     )
+
+    def __str__(self):
+        return f'{self.descricao} - R$ {self.valor}'
+
+    class Meta:
+        verbose_name='Transação'
+        verbose_name_plural='Transações'
+        ordering = ['data_transacao']
